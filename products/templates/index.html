@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock title %} 
+
+{% block content %}
+    <h4> PRODUCTS </h4>
+    <div class="row">
+        {% for product in products %}
+            <div class="col">
+                <div class="card" style="width: 12rem;">
+                    <img src="{{product.image_url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">${{product.price}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+        
+    <!--in django templates, we have two special syntax-->
+    <!--    whatever is in a double curly brackets in the html , django will evaluate it .-->
+    <!-- curly brackets and percent sign above is called a template tag in django. It is used for logics eg for and if loop -->
+    <!--    django has to end the for block with endfor-->
+    {% comment %} best thing is to code on vscode so it can auto complete these tags for you. JUST ensure your language below is django html {% endcomment %}
+    </ul>
+{% endblock content %}
