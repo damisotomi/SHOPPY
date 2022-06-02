@@ -1,2 +1,2 @@
 # pyshop
- An ecommerce website created with bootstrap and django for both frontend and backend respectively
+ An ecommerce website created with bootstrap and django for the frontend and backend respectively
